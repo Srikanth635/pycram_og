@@ -76,6 +76,8 @@ def rclpy_node():
 def setup_world() -> World:
     pr2_sem_world = URDFParser.from_file(os.path.join(os.path.dirname(__file__), "..", "..", "resources", "robots",
                                                       "pr2_calibrated_with_ft.urdf")).parse()
+    # pr2_sem_world = URDFParser.from_file(os.path.join(os.path.dirname(__file__), "..", "..", "resources", "robots",
+    #                                                   "tracy.urdf")).parse()
     apartment_world = URDFParser.from_file(
         os.path.join(os.path.dirname(__file__), "..", "..", "resources", "worlds", "apartment.urdf")).parse()
     milk_world = STLParser(
